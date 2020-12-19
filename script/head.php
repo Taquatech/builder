@@ -21,6 +21,8 @@
           <?php
       }
     ?>
-
+<style>
+<?=$headdata['__Style']?>
+</style>
 </head>
 <body <?=$headdata['__BBodyAttr']?>>

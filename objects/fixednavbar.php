@@ -2,6 +2,7 @@
 
 $Data = (isset($Data) &&  count($Data) > 0)?$Data:[
     "Logo"=>["images/logo/iconsm_white.png","images/logo/logosm.png"],
+    "LogoLink"=>"#",
     "Menus"=>[
         "Packages"=>[
             "Link"=>"javascript:void(0)",
@@ -104,8 +105,8 @@ $Data = (isset($Data) &&  count($Data) > 0)?$Data:[
     <nav>
         <div class="nbwmf-logobx nbwmf-indbx">
             <!-- Logo -->
-            <a class="nbwmf-logodark" href="./"><img src="<?php if(isset($Data["Logo"][0]))echo $Data["Logo"][0]; ?>" alt="LOGO"></a>
-            <a class="nbwmf-logowhite" href="./"><img src="<?php if(isset($Data["Logo"][1])){echo $Data["Logo"][1];}else if(isset($Data["Logo"][0])){echo $Data["Logo"][0];} ?>" alt="LOGO"></a>
+            <a class="nbwmf-logodark" href="<?=$Data['LogoLink'];?>"><img src="<?php if(isset($Data["Logo"][0]))echo $Data["Logo"][0]; ?>" alt="LOGO"></a>
+            <a class="nbwmf-logowhite" href="<?=$Data['LogoLink'];?>"><img src="<?php if(isset($Data["Logo"][1])){echo $Data["Logo"][1];}else if(isset($Data["Logo"][0])){echo $Data["Logo"][0];} ?>" alt="LOGO"></a>
         </div>
         <!-- Menus -->
         <ul id="nbwmf-menu-bx" class="w3-hide-small w3-mobile  nbwmf-indbx fadeIn animated faster">

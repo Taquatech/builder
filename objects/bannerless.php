@@ -2,13 +2,13 @@
 <?php
 $Data = (isset($Data) &&  count($Data) > 0)?$Data: [
     "Waves"=>["w3-black","w3-teal","w3-indigo"],
-    "BackgroundColor"=>"",
+    "BackgroundColor"=>"w3-purple",
     "Title"=>["Markup"=>"ABOUT","Animation"=>"fadeInLeft delay-0-2s animated slow"],
     "Content"=>["Markup"=>"US","Animation"=>"fadeInRight delay-0-4s animated slow"]  
 ];
 ?>
 
-<div class="wavecont w3-card-4 mainbgcolor-">
+<div class="wavecont w3-card-4 mainbgcolor-" style="background-color:<?=$Data['BackgroundColor']?>">
       <div class='box'>
       <?php if(isset($Data['Waves']) &&  count($Data['Waves']) >= 3){ ?>
         <div class='wave -one <?=$Data['Waves'][0]?>' ></div>

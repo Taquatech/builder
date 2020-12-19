@@ -15,6 +15,7 @@ class Builder{
       $this->headData = [
           "__BPNGIcon"=>"",
           "__BTitle"=>"Welcome",
+          "__Style"=>"",
           "__BCSS"=>[
               "FA"=>"./../LIB/FA5/css/fontawesome-all.min.css",
               "W3"=>"./../LIB/W3CSS4/w3.css",
@@ -36,6 +37,18 @@ class Builder{
    
 
     //*************HTML_Open/Head/Body Open Section************** */
+    //Add Style
+    public function Style($title=""){
+       /*  $curstyle = trim($this->headData['__Style']);
+      if($curstyle != ""){
+          $lstca = substr(trim($curstyle),strlen($curstyle)-1,1);
+          if($lstca != ";") $curstyle .= ";";
+      }
+        
+      $curstyle .= $title; */
+      $this->headData['__Style'] .= $title;
+    }
+
     //Set the Title
     public function Title($title="Welcome"){
         $this->headData['__BTitle'] = $title;
